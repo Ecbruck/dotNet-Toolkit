@@ -7,20 +7,22 @@ using Toolkit;
 
 namespace Demo
 {
-    class Program
+    partial class Program
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i < 10000;i++ )
-                MTimerTest();
+            //MTimerTest();
+            RateEstimatorTest();
         }
 
         private static void MTimerTest()
         {
-
-            MTimer timer = new MTimer();
-            System.Threading.Thread.Sleep(300);
-            Console.WriteLine(timer.GetTime() * 1000);
+            for (int i = 0; i < 10000; i++)
+            {
+                MTimer timer = new MTimer();
+                System.Threading.Thread.Sleep(300);
+                Console.WriteLine(timer.GetTime() * 1000);
+            }
         }
     }
 }

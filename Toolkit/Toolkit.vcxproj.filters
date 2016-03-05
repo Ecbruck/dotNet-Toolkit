@@ -24,6 +24,9 @@
     <ClInclude Include="MTimer.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="RateEstimator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp">
@@ -33,6 +36,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="MTimer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RateEstimator.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

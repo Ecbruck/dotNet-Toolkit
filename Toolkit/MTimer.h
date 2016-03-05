@@ -7,11 +7,12 @@ namespace Toolkit{
 	public ref class MTimer
 	{
 	private:
-		long long ticksPerSecond;
+		static long long ticksPerSecond;
         long long elapsedTime;
         long long baseTime;
-		long long inline getCurrentCounter();
+		static long long inline getCurrentCounter();
 	public:
+		static MTimer(void);
 		MTimer(void);
 
 		/// <summary>
@@ -25,7 +26,7 @@ namespace Toolkit{
 		/// <summary>
         /// Get the current time in seconds.
         /// </summary>
-		double GetAbsoluteTime();
+		static double GetAbsoluteTime();
 		/// <summary>
         /// Get the number of seconds since last call of this function.
         /// </summary>

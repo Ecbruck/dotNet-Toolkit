@@ -6,7 +6,7 @@
 using namespace System;
 
 namespace Toolkit{
-	MTimer::MTimer(void)
+	static MTimer::MTimer(void)
 	{
 		LARGE_INTEGER temp;
 		// Use QueryPerformanceFrequency to get frequency of the timer
@@ -14,6 +14,9 @@ namespace Toolkit{
             throw gcnew ApplicationException("Timer: Performance Frequency Unavailable");
 
 		ticksPerSecond = temp.QuadPart;
+	}
+	MTimer::MTimer(void)
+	{
 		baseTime = elapsedTime = getCurrentCounter();
 	}
 
